@@ -4,12 +4,12 @@ class Shape {
         this.color = color; // initializes the color property 
     }
     
-    // Placeholder method to be implemented be child classes 
+    // Placeholder method to be implemented by child classes 
     createSVGContent(){
-        throw new error('Shape method not implemeted');
+        throw new Error('Shape method not implemented');
     }
     
-    // renders SVG content for the shape with the specified color
+    // Renders SVG content for the shape with the specified color
     renderSVG() {
          return `<svg fill="${this.color}">${this.createSVGContent()}</svg>`; 
     }
@@ -23,9 +23,9 @@ class Shape {
 
 // Subclass representing a circle shape
 class Circle extends Shape {
-    createSVGCOntent() {
-        return '<circle cx="50 cy"50 r="40 />';
+    createSVGContent() {
+        return '<circle cx="50" cy="50" r="40" />';
     }
 }
 
-module.exports = {Shape, Circle};
+module.exports = { Shape, Circle };
