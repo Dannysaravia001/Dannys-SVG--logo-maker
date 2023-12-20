@@ -11,7 +11,7 @@ async function generateLogo() {
     },
     {
       name: 'textColor',
-      message: 'Enter Text Color:',
+      message: 'Enter logo Color:',
     },
     {
       name: 'shape',
@@ -22,15 +22,15 @@ async function generateLogo() {
   ]);
 
   let shape;
+  let svgContent;
   switch (userInput.shape) {
     case 'circle':
-      shape = new Circle(userInput.textColor); 
+      shape = new Circle(userInput.textColor);
+      svgContent = shape.renderSVG(userInput.text);
       break;
-    default:
-      throw new Error('Invalid shape choice');
+   
   }
 
-  const svgContent = shape.renderSVG(); 
   fs.writeFileSync('logo.svg', svgContent);
   console.log('Generated New logo.svg');
 }

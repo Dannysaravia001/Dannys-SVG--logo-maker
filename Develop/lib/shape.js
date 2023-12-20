@@ -10,9 +10,9 @@ class Shape {
     }
     
     // Renders SVG content for the shape with the specified color
-    renderSVG() {
-         return `<svg fill="${this.color}">${this.createSVGContent()}</svg>`; 
-    }
+    renderSVG(text) {
+        return `<svg fill="${this.color}">${this.createSVGContent(text)}</svg>`;
+      }
     
     // Static method to generate an image based on user input
     static generateSVG(userInput) {
@@ -23,9 +23,17 @@ class Shape {
 
 // Subclass representing a circle shape
 class Circle extends Shape {
-    createSVGContent() {
-        return '<circle cx="50" cy="50" r="40" />';
+    constructor(color) {
+      super(color);
     }
-}
-
+  
+    createSVGContent(text) {
+      return `
+        <svg width="100" height="100">
+          <circle cx="50" cy="50" r="40" fill="${this.color}" />
+          <text x="50%" y="50%" text-anchor="middle" fill="white">${text}</text>
+        </svg>
+      `;
+    }
+  }
 module.exports = { Shape, Circle };

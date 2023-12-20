@@ -8,10 +8,12 @@ class Circle extends Shape {
   }
 
   // Overrides the method from the parent class to create circle SVG content
-  createSVGContent() {
-    // Logic for rendering a circle SVG
-    return '<circle cx="100" cy="100" r="80" />'; // Generates SVG content for a circle
+  createSVGContent(text) {
+    return `
+      <circle cx="50" cy="50" r="40" />
+      <text x="50%" y="50%" text-anchor="middle" fill="${this.color}">${text}</text>
+    `;
   }
 }
 
-module.exports = Circle; // Exports the Circle class for use in other files
+module.exports = Circle;
