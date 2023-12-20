@@ -1,4 +1,6 @@
 const inquirer = require('inquirer');
+const fs = require('fs');
+const { Circle } = require('./lib/shape');
 
 async function generateLogo() {
   const userInput = await inquirer.prompt([
