@@ -30,10 +30,13 @@ Github profile: [Dannysaravia001](https://github.com/Dannysaravia001)
 ## Licenses
 No liceneses used
 ## Screenshots
-![Screenshot1](<Screenshot1.png>)
 
-![Screenshot2](<Screenshot2.png>)
+![Screenshot4](<./Develop/img/screenshot4.png>)
 
-![Screenshot3](<Screenshot3.png>)
+![Screenshot1](<./Develop/img/screenshot1.png>)
+
+![Screenshot3](<./Develop/img/screenshot3.png>)
+
+![Screenshot2](<./Develop/img/screenshot2.png>)
 ## videos-demo
-![video](Video-Demo.webm)
+![video](./Develop/img/Demo.webm)
